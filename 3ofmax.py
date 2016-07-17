@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 
 def inputNumber():
     counter = 0
     numbers = list()
     while True:
-        num = input('Enter number:')
+        num = int(input('Enter number:'))
         if isinstance(num, int):
             numbers.append(num)
             counter += 1
