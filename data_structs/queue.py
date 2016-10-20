@@ -13,10 +13,10 @@ class Queue:
         return len(self.items)
 
     def enqueue(self, item):
-        self.items.insert(0, item)
+        self.items.append(item)
 
     def dequeue(self):
-        return self.items.pop()
+        return self.items.pop(0)
 
 
 def main():
