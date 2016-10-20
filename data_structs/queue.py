@@ -6,7 +6,7 @@ class Queue:
     def __init__(self, items=[]):
         self.items = items
 
-    def is_Empty(self):
+    def isEmpty(self):
         return self.items == []
 
     def size(self):
