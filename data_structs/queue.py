@@ -3,8 +3,8 @@
 
 
 class Queue:
-    def __init__(self):
-        self.items = list()
+    def __init__(self, items=[]):
+        self.items = items
 
     def is_Empty(self):
         return self.items == []
@@ -12,10 +12,10 @@ class Queue:
     def size(self):
         return len(self.items)
 
-    def set(self, item):
+    def enqueue(self, item):
         self.Queue.insert(0, item)
 
-    def get(self):
+    def dequeue(self):
         return self.items.pop()
 
 
