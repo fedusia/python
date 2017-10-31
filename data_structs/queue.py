@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-''' Linear queue '''
+""" Linear queue """
 
 
 class Queue:
-    def __init__(self, items=[]):
+    def __init__(self, items=None):
+        if items is None:
+            items = []
         self.items = items
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def size(self):
