@@ -7,7 +7,7 @@ def binary_search(target, sequence):
     lo = 0
     hi = len(sequence)
     while lo <= hi:
-        mid = lo + (hi - lo) // 2
+        mid = (lo + hi) // 2
         if sequence[mid] == target:
             return '{} found in sequence'.format(mid)
         elif sequence[mid] < target:
