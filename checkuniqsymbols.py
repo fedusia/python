@@ -1,4 +1,4 @@
-def uniq_str(string):
+def check_uniq_symbols(string):
     hash_map = dict()
     for token in string:
         if hash_map.get(token):
