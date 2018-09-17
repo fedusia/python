@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 def check_uniq_symbols(string):
     hash_map = dict()
     for token in string:
@@ -7,3 +9,7 @@ def check_uniq_symbols(string):
         else:
             hash_map[token] = 1
     return True
+
+
+if __name__ == '__main__':
+    main()
