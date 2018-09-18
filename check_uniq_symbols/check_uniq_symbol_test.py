@@ -6,7 +6,7 @@ class TestUniqSymbol(unittest.TestCase):
         self.assertFalse(check_uniq_symbol.check_uniq_symbols('qq'))
 
     def test_uniq_string(self):
-        self.assertTrue(check_uniq_symbol.check_uniq_symbols('qWertY'))
+        self.assertTrue(check_uniq_symbol.check_uniq_symbols('qWertY asd'))
 
 if __name__ == '__main__':
     unittest.main()
