@@ -3,13 +3,13 @@
 
 def main():
     a = [1, 100, 10, 8, 1000, 333]
-    print('result: {}'.format(merge_sort(a)))
+    print("result: {}".format(merge_sort(a)))
 
 
 def merge_sort(A):
     if len(A) == 1:
         return A
-    middle = len(A)//2
+    middle = len(A) // 2
     left = merge_sort(A[:middle])
     right = merge_sort(A[middle:])
     return merge(left, right)
@@ -35,5 +35,5 @@ def merge(a, b):
     return c
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
