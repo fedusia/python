@@ -8,14 +8,17 @@ def main():
 
 def check(input_data):
     stack = Stack()
-    i = 0
-    while i < len(input_data):
-        if input_data[i] == '(' :
-            stack.push('(')
-        elif input_data[i] == ')' and not stack.empty():
+    for char in input_data:
+        if char in ['[', '{']:
+            stack.push(char)
+        else:
+            if stack.empty():
+                return False
+            top = stack.top()
+            if top == '[' and char != ']' or\
+               top == '{' and char != '}':
+                return False
             stack.pop()
-        i += 1
-    # import ipdb; ipdb.set_trace()
     return stack.empty()
 
 
