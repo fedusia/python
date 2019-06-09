@@ -8,18 +8,24 @@ def main():
 
 def check(input_data):
     stack = Stack()
-    for char in input_data:
-        if char in ['[', '{']:
+#     import ipdb; ipdb.set_trace()
+    for idx, char in enumerate(input_data):
+        if char in ['[', '{', '(']:
             stack.push(char)
-        else:
+        elif char in [']', '}', ')']:
             if stack.empty():
-                return False
+                return idx + 1
             top = stack.top()
             if top == '[' and char != ']' or\
-               top == '{' and char != '}':
-                return False
+               top == '{' and char != '}' or\
+               top == '(' and char != ')':
+                return idx + 1
             stack.pop()
-    return stack.empty()
+        else:
+            continue
+    if stack.empty():
+        return 'Success'
+    return len(stack.stack)
 
 
 class Stack:
