@@ -1,3 +1,4 @@
+import random
 import unittest
 from selection_sort import selection_sort
 
@@ -10,6 +11,10 @@ class TestSelectionSort(unittest.TestCase):
     def test_selection_sort_signed_int(self):
         answer = [-100, 50, 70, 100]
         self.assertEqual(selection_sort([50, 70, -100, 100]), answer)
+
+    def test_selection_sort_random(self):
+        data = [random.randint(-100, 100) for _ in range(100)]
+        self.assertEqual(selection_sort(data), sorted(data))
 
 
 if __name__ == '__main__':
