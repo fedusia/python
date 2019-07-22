@@ -18,16 +18,13 @@
 
 
 def selection_sort(A):
-    i = 0
-    j = i
-    while i < len(A) - 1:
-        if A[i] > A[j]:
-            A[i], A[j] = A[j], A[i]
-        if j < len(A) - 1:
-            j += 1
-        else:
-            i += 1
-            j = i
+    # import ipdb; ipdb.set_trace()
+    for i in range(len(A)):
+        min_idx = i
+        for j in range(i + 1, len(A)):
+            if A[j] < A[min_idx]:
+                min_idx = j
+        A[i], A[min_idx] = A[min_idx], A[i]
     return A
 
 
