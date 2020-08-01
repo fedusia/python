@@ -18,7 +18,7 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import timeit
 
     with open("data_countSmaller", "r") as f:

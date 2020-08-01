@@ -15,7 +15,7 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().findNumbers([12, 345, 2, 6, 7896]) == 2
     assert Solution().findNumbers([555, 901, 482, 1771]) == 1
     assert Solution().findNumbers([437, 315, 322, 431, 686, 264, 442]) == 0

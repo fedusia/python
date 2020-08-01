@@ -18,6 +18,6 @@ class Solution:
         return tmp * sign
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().reverse(123) == 321
     assert Solution().reverse(-123) == -321

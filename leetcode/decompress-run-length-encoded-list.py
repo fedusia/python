@@ -12,6 +12,6 @@ class Solution:
         return result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().decompressRLElist([1, 2, 3, 4]) == [2, 4, 4, 4]
     assert Solution().decompressRLElist([1, 1, 2, 3]) == [1, 3, 3]

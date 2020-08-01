@@ -10,6 +10,6 @@ class Solution:
         return prefix
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().longestCommonPrefix(["flower", "flow", "flight"]) == "fl"
-    assert Solution().longestCommonPrefix((["dog","racecar","car"])) == ""
+    assert Solution().longestCommonPrefix((["dog", "racecar", "car"])) == ""

@@ -20,7 +20,7 @@ class Solution:
         return output
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().romanToInt("MCMXCIV") == 1994
     assert Solution().romanToInt("III") == 3
     assert Solution().romanToInt("IX") == 9

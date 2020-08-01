@@ -24,6 +24,6 @@ class Solution:
         return prev
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().findMaxConsecutiveOnes([0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1]) == 6
     assert Solution().findMaxConsecutiveOnes([0, 1]) == 1
