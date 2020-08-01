@@ -12,6 +12,7 @@ class Solution:
         return st == []
 
 
+
 if __name__ == "__main__":
     assert Solution().isValid("([)]") is False
     assert Solution().isValid("{[]}") is True
