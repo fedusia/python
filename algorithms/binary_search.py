@@ -37,13 +37,13 @@ def main():
         "binary_search(target, sequence)",
         setup="from __main__ import binary_search;"
         "target = 20000000; sequence = [i for i in range(20000001)]",
-        number=1
+        number=100
     )
     t2 = timeit.timeit(
         "operator_in(target, sequence)",
         setup="from __main__ import operator_in;"
         "target = 20000000; sequence = [i for i in range(20000001)]",
-        number=1
+        number=100
     )
 
     print("binary_search: {}".format(t1))
