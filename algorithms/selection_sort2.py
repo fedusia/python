@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import timeit
 
 # Сортировка выбором
 # Алгоритм:
@@ -41,6 +42,32 @@ def selection_sort(arr):
 def main():
     print(selection_sort([55, 3, 45, 5, 6, 5, 4, 2]))
 
-
+    t1 = timeit.timeit(
+        "selection_sort(sequence)",
+        setup="from __main__ import selection_sort; import random;"
+        "sequence = [random.randint(0,100) for i in range(100)]",
+        number=100,
+    )
+    t2 = timeit.timeit(
+        "selection_sort(sequence)",
+        setup="from __main__ import selection_sort; import random;"
+        "sequence = [random.randint(0,100) for i in range(1000)]",
+        number=100,
+    )
+    t3 = timeit.timeit(
+        "selection_sort(sequence)",
+        setup="from __main__ import selection_sort; import random;"
+        "sequence = [random.randint(0,100) for i in range(10000)]",
+        number=100,
+    )
+    # t4 = timeit.timeit(
+    #     "selection_sort(sequence)",
+    #     setup="from __main__ import selection_sort; import random;"
+    #     "sequence = [random.randint(0,100) for i in range(100000)]",
+    #     number=100,
+    # )
+    print("selection_sort 100: {}".format(t1))
+    print("selection_sort 1000: {}".format(t2))
+    print("selection_sort 10000: {}".format(t3))
 if __name__ == "__main__":
     main()
